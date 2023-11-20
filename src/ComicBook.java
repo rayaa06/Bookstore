@@ -18,7 +18,7 @@ public class ComicBook extends Book {
         price-=price*.6;
         return price;
     }
-    public double getPrice(double otstypka){
-        return otstypka;
+    public double getPrice(double sale){
+        return sale;
     }
 }
