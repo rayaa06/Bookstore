@@ -7,7 +7,7 @@ public class Main {
         System.out.println("Списък на книгите: ");
         for (int i=0; i<num; i++) {
             Book book = null;
-            System.out.println("Моля въведете данни за книга в следния ред: <тип-Comic/Children/Book> <заглавие> <автор-име и възраст> <цена> <nalichnost>");
+            System.out.println("Моля, въведете данни за книга "+ (i+1) +". в книжарницата в следния ред: <тип-Comic/Children/Book> <заглавие> <автор-име и възраст> <цена> <наличност>");
             BookType type = BookType.valueOf(sc.next().toUpperCase());
             switch (type) {
                 case COMIC:
@@ -38,11 +38,12 @@ public class Main {
             }
             bs.books.add(book);
         }
-        System.out.println("Продадени книги:");
+        System.out.println("Продадени книги: ");
         for (int i=0; i< bs.books.size(); i++) {
             if (i%2==0) {
                 bs.sell(bs.books.get(i));
             }
         }
+        System.out.println("Благодаря, че пазарувахте тук. Моля елате пак!");
     }
 }

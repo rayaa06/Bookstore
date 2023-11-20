@@ -4,11 +4,11 @@ public class Bookstore {
     public void sell (Book book){
         int av=book.getAvailable();
         if (av>0) {
-            System.out.println("Book: " + book.getTitle() + "; author: " + book.author.getName() + "; price: " + book.getPrice()+"lewa");
+            System.out.println("Заглавие: " + book.getTitle() + "   aвтор: " + book.author.getName() + "    цена: " + book.getPrice()+"лв.");
             book.setAvailable(av - 1);
         }
         if (av<=0){
-            System.out.println("За тази книга няма наличност.");
+            System.out.println("За съжаление за "+ book.getTitle()+ " от " + book.author.getName()+ " няма наличност.");
         }
     }
 }
