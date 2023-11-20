@@ -4,9 +4,10 @@ public class Main {
         Bookstore bs= new Bookstore();
         Scanner sc=new Scanner(System.in);
         int num=sc.nextInt();
+        System.out.println("Списък на книгите: ");
         for (int i=0; i<num; i++) {
             Book book = null;
-            System.out.println("Въведете данни за книга: <тип-Comic/Children/Book> <заглавие> <автор-ime i wyzrast> <цена> <nalichnost>");
+            System.out.println("Моля въведете данни за книга в следния ред: <тип-Comic/Children/Book> <заглавие> <автор-име и възраст> <цена> <nalichnost>");
             BookType type = BookType.valueOf(sc.next().toUpperCase());
             switch (type) {
                 case COMIC:
@@ -37,7 +38,7 @@ public class Main {
             }
             bs.books.add(book);
         }
-        System.out.println("Prodazhba na knigi:");
+        System.out.println("Продадени книги:");
         for (int i=0; i< bs.books.size(); i++) {
             if (i%2==0) {
                 bs.sell(bs.books.get(i));
