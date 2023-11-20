@@ -8,7 +8,7 @@ public class Bookstore {
             book.setAvailable(av - 1);
         }
         if (av<=0){
-            System.out.println("Nqma nalichnost");
+            System.out.println("За тази книга няма наличност.");
         }
     }
 }
